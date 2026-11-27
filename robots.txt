@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /travel-trade
+Disallow: /fr/travel-trade
+Disallow: /de/travel-trade
+Sitemap: https://lemaraecocamp.com/sitemap.xml
