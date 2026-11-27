@@ -153,7 +153,7 @@ a{color:#2F3B2A}a:hover{color:#8A3F2B}
 <script>
 function toggleMenu(){var m=document.getElementById('site-menu');if(!m)return;var open=m.hasAttribute('hidden');if(open){m.removeAttribute('hidden');document.body.style.overflow='hidden'}else{m.setAttribute('hidden','');document.body.style.overflow=''}}
 function sendForm(f,cb){var d=new FormData(f);var b=f.querySelector('button[type=submit]');if(b){b.disabled=true;b.style.opacity=.6}
-fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(){cb(true)}).catch(function(){cb(false)}).finally(function(){if(b){b.disabled=false;b.style.opacity=1}})}
+fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){cb(j&&(j.success===true||j.success==='true'),j)}).catch(function(){cb(false)}).finally(function(){if(b){b.disabled=false;b.style.opacity=1}var p=f.querySelector('.form-msg');if(p)setTimeout(function(){p.scrollIntoView({behavior:'smooth',block:'center'})},50)})}
 </script>
 </body>
 </html>
