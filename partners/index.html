@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Partner area · Lemara</title><link rel="icon" type="image/png" href="/assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}body{margin:0;font-family:Jost,system-ui,sans-serif;font-weight:300;color:#2B2A24;background:#F5F0E6;line-height:1.6}
+.top{background:#2F3B2A;color:#F5F0E6;padding:18px 5vw;display:flex;justify-content:space-between;align-items:center}.top a{color:#D9D0BC;text-decoration:none;font-size:14px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.04em}
+main{max-width:980px;margin:0 auto;padding:64px 5vw}.eb{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#8A3F2B;margin:0 0 10px}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;color:#2F3B2A;line-height:1.1;margin:0 0 16px}h1{font-size:clamp(36px,5vw,54px)}h2{font-size:32px;margin-top:48px}
+input{font:inherit;padding:14px 16px;border:1px solid #CFC4AE;border-radius:2px;background:#fff;width:100%;max-width:360px}
+button,.btn{font:inherit;font-weight:400;letter-spacing:.06em;padding:14px 26px;background:#2F3B2A;color:#F5F0E6;border:none;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block}
+.err{color:#8A3F2B;min-height:1.6em}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+.card{background:#FBF8F2;border:1px solid #D6CCB8;padding:24px;display:flex;flex-direction:column;gap:8px}.card h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;margin:0;color:#2F3B2A}
+.card p{margin:0 0 12px;font-size:15px;color:#4A4A3E;flex:1}table{width:100%;border-collapse:collapse;background:#FBF8F2;border:1px solid #D6CCB8;font-size:15px}
+th{text-align:left;font-weight:500;background:#ECE5D6;padding:12px 14px}td{padding:12px 14px;border-top:1px solid #D6CCB8}.n{text-align:right}.small{font-size:14px;color:#4A4A3E}</style></head>
+<body><div class="top"><span class="brand">Lemara</span><a href="/travel-trade/">Travel trade</a></div>
+<main>
+<section id="lock"><p class="eb">Partner area</p><h1>Lemara trade kit</h1>
+<p>Reserved for registered travel agencies and tour operators. Enter the access code we sent you by email.</p>
+<form id="f" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><input id="pw" type="password" placeholder="Access code" autocomplete="current-password" required><button type="submit">Open</button></form>
+<p class="err" id="err"></p>
+<p class="small">No access yet? <a href="/travel-trade/">Request it here</a>, we reply within 24 hours.</p></section>
+<section id="kit" hidden><p class="eb">Partner area · 2025/2026</p><h1>Welcome to the Lemara trade kit</h1>
+<p>Everything you need to sell Lemara: our fact sheet, net rates and HD photos. Please sell at the public rate shown on lemaraecocamp.com.</p>
+<div class="cards" id="cards"></div>
+<h2>Packaged stays · net rates</h2><table><thead><tr><th>Stay</th><th class="n">Nights</th><th class="n">Public</th><th class="n">Net</th></tr></thead><tbody id="pk"></tbody></table>
+<p class="small">Per person, 2 sharing a family banda (Family Wild: per family). Full board, listed activities, park fees and station transfer included. Room and activity rates à la carte are in the rate sheet.</p>
+<h2>Book or ask</h2><p>Write to <a href="mailto:info@lemaraecocamp.com">info@lemaraecocamp.com</a> or WhatsApp <a href="https://wa.me/255686456970">+255 686 45 69 70</a> with the dates, number of guests and your agency name.</p></section>
+</main>
+<script>
+const SALT='g/e1liR/ckypamkv1KhJJA==',IT=250000,BLOB='I0g2La3u18uYvqPf3IAoMozy7SuH/lvf/vxvITzFNiR0303L1dknOXMs/527UV6TN64yTvpVi5gB0wL0S/3IGBrnRJCOFLvZroFAE3Io5NJPvLVq72fa2KUhoXmrJWoKzIvtSfj1NuGRfWhAn04ZVIOhJDkq/tvrH+Y+rZGv42rtpwCqoIrD6ajTeSdpeGIbq+R3Qa7AH+kV263XVqLxWwvtrQJfmK8sK1yU+j5a7BcNfxLOJsPlt2mQDoxlzP77WjFy+iqmy0GuAoJnBPXtTPMErvl70CPe0r5izSkVo5+x74sB8OTMkSo8UokTMOFFM8h8hCcXzoFHhqgMrBabciAut6GY4Z+273BRiaYFQA+hdxSvNoF5kETTQ4L/KX2HUC7omIBi6rBV8K0Y9PNEvkLNB5xX2gln4Y8yIeWfwCpxWlM7DGs+TCy4w84fh7ZqKXUrETSI3TwjwGbsPq9xmwe/oAHy7Is6PTBFxB9cJeDMBjCDN9vL1iKNRTMuQaCod1InjDvUex94aHDfH+LDr+aQasqziXL6HZi1+sRl9jPdbSFoUO5fE7Qk5g0x6jpr+Vw+YI6fla3RfeI+mLImCj7zA8VV8h7o8G+knxnwFXI26cCrGV1QeOne6dbAt8AsxHvcS2jYk63zH+78tpVMcpFU4JLIzjskGPGxefFRjk1jS3u88rbncKidK4BIPsTf/mDyjrVn8AwRy4skg9JK5LiVce+ce622YWGd7B4p8HI3yD1k0haUBF2JSPdkHhCapQw8u1/IMRokBMRE5x9hUX7IZAJg0MSavr+Q8xI6119AP1wABhKYYLPzp+gOehWanFKqd0E+tdNvLu7469GjIr5QJBxICXCRbqba3eEuHavKip6SfvM6Rj5tmx09F1UAetu3wAGHdMoOMoLHff+1//twVa7RAE5kiLtfAfWkyINmtv2R5+XGBtJp2bX8EHUXsnvGZJkY2YdWl20z4lIImzhbxNg/15gicVUzpabU47cdkN399bFO954PQ0gPlHuCFb4K60Ry8dVWDCiCrDAfu6FqdmI14sfmscdASMRVQSHngI7IzJH2mtCSeroAdKkN6OQifisxSoEZfzmR8kZP8nMlnkAOK20VMiNe1VNICqpzPb/C8qSWE0oEkuEvCZ5w5n1pOSXsJ5vPSzYaGIbyRRENBuYpVc4Daj7budAq3cVnW8C5bamy+RBNASpS6MaRZhe0WDYNDvL0fDn8DiQeKRo1QBueC1KRnDiLlQ5IO3xOFZiema/f+aKlLkuxuOT1VKr4Xel6uavEeMs9VXe87lZR2mA/GAX0NsbnZPspo6smvdjxN1zymXQmQ34kf3hbX7yDz3TqIVbibftrOwHtlcHyGp46DXUSi9HzJsl0J0IEonbKqLHQSnKfiKLkCpbM2cM8cicPF/QRSAPh1sr+ig+mxM+4seH3WOuO8mTDARsufjNYXtbYP0csmtnC9K3hgCHnR3yam9kX3bj3im601a0Xl9HqLBGJbJbuxIZ4mZG161TBaovFfuSrAw==';
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));let KEY=null;
+async function derive(pw){const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(SALT),iterations:IT,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt'])}
+async function dec(buf){buf=new Uint8Array(buf);return crypto.subtle.decrypt({name:'AES-GCM',iv:buf.slice(0,12)},KEY,buf.slice(12))}
+function mb(n){return (n/1048576).toFixed(n>1048576*10?0:1)+' MB'}
+async function open_(pw){KEY=await derive(pw);const d=JSON.parse(new TextDecoder().decode(await dec(b64(BLOB))));
+try{sessionStorage.setItem('lemara_kit',pw)}catch(e){}
+document.getElementById('lock').hidden=true;document.getElementById('kit').hidden=false;
+const c=document.getElementById('cards');d.files.forEach(f=>{const el=document.createElement('div');el.className='card';
+el.innerHTML=`<h3>${f.title}</h3><p>${f.desc} · ${mb(f.size)}</p><button type="button">Download</button>`;
+const b=el.querySelector('button');b.onclick=async()=>{b.textContent='Preparing…';b.disabled=true;try{const r=await fetch(f.src);const data=await dec(await r.arrayBuffer());
+const url=URL.createObjectURL(new Blob([data]));const a=document.createElement('a');a.href=url;a.download=f.fn;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);b.textContent='Download again'}catch(e){b.textContent='Error, try again'}b.disabled=false};c.appendChild(el)});
+document.getElementById('pk').innerHTML=d.packages.map(p=>`<tr><td>${p.name}</td><td class="n">${p.nights}</td><td class="n">US$ ${p.public.toLocaleString('en')}</td><td class="n"><strong>US$ ${p.net.toLocaleString('en')}</strong></td></tr>`).join('')}
+document.getElementById('f').onsubmit=async e=>{e.preventDefault();document.getElementById('err').textContent='';try{await open_(document.getElementById('pw').value.trim())}catch(x){document.getElementById('err').textContent='This code is not valid. Check the email we sent you, or write to info@lemaraecocamp.com.'}};
+try{const s=sessionStorage.getItem('lemara_kit');if(s)open_(s).catch(()=>{})}catch(e){}
+</script></body></html>

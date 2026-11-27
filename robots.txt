@@ -3,4 +3,5 @@ Allow: /
 Disallow: /travel-trade
 Disallow: /fr/travel-trade
 Disallow: /de/travel-trade
+Disallow: /partners
 Sitemap: https://lemaraecocamp.com/sitemap.xml
